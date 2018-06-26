@@ -43,7 +43,7 @@ public class App {
  
         System.out.println("Server started");
  
-        //runGetRequest();
+        runGetRequest();
         runDatabaseQuery();
     }
  
@@ -57,10 +57,10 @@ public class App {
             // sample URL
             //String url = "http://ip.jsontest.com/";
             //String url = "http://140.86.15.104:3000/shield/33/45/red/AnaIvanOnGitHub/";
-            String url = "http://140.86.15.104:3000/reactorCore/320/650/red/AnaIvan/";
+            //String url = "http://140.86.15.104:3000/reactorCore/320/650/red/AnaIvan/";
             //String YY = String.valueOf(i); 
             //String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
-
+String url = "http://140.86.15.104:3000/shield/33/45/red/AnaIvan/";
             CloseableHttpResponse response = null;
 
             try {
