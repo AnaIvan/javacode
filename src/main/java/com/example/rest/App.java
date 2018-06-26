@@ -49,11 +49,19 @@ public class App {
      * Performs a simple GET request and prints the result to the log.
      */
     private static void runGetRequest() {
- 
-    	// sample URL
-        String url = "http://140.86.15.104:3000/shield/33/44/red/AnaIvan";
      
-        CloseableHttpResponse response = null;
+     for (int i=9; i>=0; i--)
+     {
+         // sample URL
+         //String url = "http://ip.jsontest.com/";
+         //String url = "http://140.86.15.104:3000/shield/33/45/red/EddyOnGitHub/";
+         String YY = String.valueOf(i); 
+         String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
+ 
+    	     // sample URL
+          //String url = "http://140.86.15.104:3000/fighters/33/44/red/AnaIvan";
+          //http://140.86.15.104:3000/fighters/45/y-coordinate_goes_here/Your_squad_color_goes_here/Your_microservice_name_goes_here
+          CloseableHttpResponse response = null;
  
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -72,6 +80,7 @@ public class App {
                 System.out.println(ie);
             }
         }    
+     }
     }
  
     /**
