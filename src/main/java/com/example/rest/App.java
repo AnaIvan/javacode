@@ -1,4 +1,4 @@
-/*Ana comment */
+/*AnaIvan comment */
  
 /* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
 package com.example.rest;
@@ -51,16 +51,20 @@ public class App {
      */
     private static void runGetRequest() {
      
-     for (int i=9; i>=0; i--)
-     {
+     //for (int i=9; i>=0; i--)
+     //{
          // sample URL
          //String url = "http://ip.jsontest.com/";
          //String url = "http://140.86.15.104:3000/shield/33/45/red/EddyOnGitHub/";
-         String YY = String.valueOf(i); 
-         String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
- 
-    	    CloseableHttpResponse response = null;
- 
+     for ( int i=9; i>0; i--)
+     {
+         String YY = String.valueOf(i);
+     
+     //    String YY = String.valueOf(i); 
+         //String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
+         String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
+      
+        CloseableHttpResponse response = null;
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
             HttpGet httpGet = new HttpGet(url);
