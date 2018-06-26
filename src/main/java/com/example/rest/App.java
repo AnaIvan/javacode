@@ -58,10 +58,7 @@ public class App {
          String YY = String.valueOf(i); 
          String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
  
-    	     // sample URL
-          //String url = "http://140.86.15.104:3000/fighters/33/44/red/AnaIvan";
-          //http://140.86.15.104:3000/fighters/45/y-coordinate_goes_here/Your_squad_color_goes_here/Your_microservice_name_goes_here
-          CloseableHttpResponse response = null;
+    	    CloseableHttpResponse response = null;
  
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
