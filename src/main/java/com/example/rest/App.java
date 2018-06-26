@@ -1,5 +1,5 @@
-/*AnaIvan comment */
- 
+/*eddy comment */
+
 /* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
 package com.example.rest;
  
@@ -14,7 +14,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
- 
+
+
 @SpringBootApplication
 public class App {
  
@@ -50,39 +51,35 @@ public class App {
      * Performs a simple GET request and prints the result to the log.
      */
     private static void runGetRequest() {
-     
-     //for (int i=9; i>=0; i--)
-     //{
-         // sample URL
-         //String url = "http://ip.jsontest.com/";
-         //String url = "http://140.86.15.104:3000/shield/33/45/red/EddyOnGitHub/";
-     for ( int i=9; i>0; i--)
-     {
-         String YY = String.valueOf(i);
-     
-     //    String YY = String.valueOf(i); 
-         //String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
-         String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
-      
-        CloseableHttpResponse response = null;
-        try {
-            CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet(url);
-            response = httpclient.execute(httpGet);
-            String content = EntityUtils.toString(response.getEntity());
-            System.out.println("Server response: " + content);
-        } catch (IOException e) {
-            System.out.println(e);
-        } finally {
+ 
+    for (int i=9; i>=0; i--)
+    {
+            // sample URL
+            //String url = "http://ip.jsontest.com/";
+            //String url = "http://140.86.15.104:3000/shield/33/45/red/EddyOnGitHub/";
+            String YY = String.valueOf(i); 
+            String url = "http://140.86.15.104:3000/fighters/45/" + YY + "/red/AnaIvanOnGitHub/";
+
+            CloseableHttpResponse response = null;
+
             try {
-                if (response != null) {
-                    response.close();
+                CloseableHttpClient httpclient = HttpClients.createDefault();
+                HttpGet httpGet = new HttpGet(url);
+                response = httpclient.execute(httpGet);
+                String content = EntityUtils.toString(response.getEntity());
+                System.out.println("Server response: " + content);
+            } catch (IOException e) {
+                System.out.println(e);
+            } finally {
+                try {
+                    if (response != null) {
+                        response.close();
+                    }
+                } catch (IOException ie) {
+                    System.out.println(ie);
                 }
-            } catch (IOException ie) {
-                System.out.println(ie);
-            }
-        }    
-     }
+            } 
+    }
     }
  
     /**
